@@ -14,7 +14,6 @@ const upload = multer({
 });
 
 //MS Specific
-const axios = require("axios").default;
 const async = require("async");
 const fs = require("fs");
 const https = require("https");
@@ -37,8 +36,6 @@ cloudinary.config({
 
 const key = process.env.MS_COMPUTER_VISION_SUBSCRIPTION_KEY;
 const endpoint = process.env.MS_COMPUTER_VISION_ENDPOINT;
-const faceEndpoint = process.env.MS_FACE_ENDPOINT;
-const subscriptionKey = process.env.MS_FACE_SUB_KEY;
 
 const computerVisionClient = new ComputerVisionClient(
   new ApiKeyCredentials({ inHeader: { "Ocp-Apim-Subscription-Key": key } }),
@@ -56,9 +53,12 @@ app.get("/", (req, res) => {
 
 app.post("/", upload.single("file-to-upload"), async (req, res) => {
   try {
-    let hotDogCount = 0;
+    let catCount = 0;
     // Upload image to cloudinary
-    const result = await cloudinary.uploader.upload(req.file.path);
+    const result = await cloudinary.uploader.upload(req.file.path, {
+      folder: "MicrosoftProject1",
+      use_filename: true,
+    });
     const objectURL = result.secure_url;
 
     // Analyze a URL image
@@ -77,8 +77,8 @@ app.post("/", upload.single("file-to-upload"), async (req, res) => {
         `${objects.length} object${objects.length == 1 ? "" : "s"} found:`
       );
       for (const obj of objects) {
-        if (obj.object === "Hot dog") {
-          hotDogCount = hotDogCount + 1;
+        if (obj.object === "cat" || obj.object === "Persian cat") {
+          catCount = catCount + 1;
         }
         console.log(
           `    ${obj.object} (${obj.confidence.toFixed(
@@ -100,7 +100,11 @@ app.post("/", upload.single("file-to-upload"), async (req, res) => {
       );
     }
 
-    res.render("result.ejs", { count: hotDogCount, img: objectURL });
+    res.render("result.ejs", {
+      count: catCount,
+      img: objectURL,
+      objects: visualFeatures,
+    });
   } catch (err) {
     console.log(err);
   }
