@@ -60,7 +60,6 @@ app.post("/", upload.single("file-to-upload"), async (req, res) => {
       use_filename: true,
     });
     const objectURL = result.secure_url;
-
     // Analyze a URL image
     console.log("Analyzing objects in image...", objectURL.split("/").pop());
 
@@ -100,11 +99,7 @@ app.post("/", upload.single("file-to-upload"), async (req, res) => {
       );
     }
 
-    res.render("result.ejs", {
-      count: catCount,
-      img: objectURL,
-      objects: visualFeatures,
-    });
+    res.render("result.ejs", { count: catCount, img: objectURL });
   } catch (err) {
     console.log(err);
   }
