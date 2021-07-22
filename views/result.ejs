@@ -13,19 +13,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <% if(locals.count > 0 ) { %>
-    <img src="<%= img%>" alt="Cat" />
-
-    <h1>Cat</h1>
-
-    <% }else { %>
-    <img src="<%= img%>" alt="Not Cat" />
-    <h1>Not Cat</h1>
-    <% } %>
-
-    <form action="/" enctype="multipart/form-data" method="post">
-      <input type="file" name="file-to-upload" />
-      <input type="submit" value="Upload" />
-    </form>
+    <div>
+      <% if(locals.count > 0 ) { %>
+      <div>
+        <img src="<%= img%>" alt="Cat" />
+      </div>
+      <div class="cat">
+        <h1>It's a Cat</h1>
+      </div>
+      <% }else { %>
+      <div>
+        <img src="<%= img%>" alt="Not Cat" />
+      </div>
+      <div class="cat">
+        <h1>It's Not a Cat</h1>
+      </div>
+      <% } %>
+      <div>
+        <form action="/" enctype="multipart/form-data" method="post">
+          <input class="btns" type="file" name="file-to-upload" />
+          <input class="btns" type="submit" value="Upload" />
+        </form>
+      </div>
+    </div>
   </body>
 </html>

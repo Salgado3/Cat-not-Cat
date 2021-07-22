@@ -2,7 +2,6 @@ body {
   background-image: url("./images/cat\ background.jpg");
   margin-top: 10%;
   height: 400px;
-  border: 2px solid black;
   display: flex;
   justify-content: center;
 }
@@ -13,4 +12,13 @@ body {
 
 img {
   width: 300px;
+}
+.cat {
+  font-size: 2rem;
+  background: skyblue;
+  padding: 2% 2%;
+  margin: 0 1% 1% 1%;
+}
+
+.btns {
 }
