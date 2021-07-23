@@ -11,7 +11,3 @@ Ever wonder if there is a cat in the photo? No? Well,... regardless... if you ev
 I created a web app using Microsoft's Azure Computer Vision. I read their documentation and utilized their code template to begin. Computer Vision recognizes objects found in photos. The photos are hosted on Cloudinary. I used JavaScript to find cats in photos and display in EJS.
 
 **Tech used:** EJS, CSS, JavaScript, Bootstrap, Node.js, Cloudinary, Microsoft Azure Computer Vision
-
-## Optimizations
-
-## Lessons Learned:
