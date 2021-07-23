@@ -4,7 +4,7 @@ Ever visited Mexico or thought about visiting? If you are like a lot of people (
 
 **Link to project:** https://catnotcat.herokuapp.com/
 
-![app in action gif](/public/imgs/catNotCat.gif)
+![app in action gif](images/catNotCat.gif)
 
 ## How It's Made:
 
