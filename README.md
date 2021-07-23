@@ -1,6 +1,6 @@
 # Is it a Cat?
 
-Ever visited Mexico or thought about visiting? If you are like a lot of people (including my younger self), when you think of Mexico, Cancun or Tijuana may come to mind. Mexico has a rich and colorful history with various climates and terrains. The Pueblos Magicos are Magical towns located all over Mexico. I've created an API that will show you the true beauty of Mexico and hopefully encourage you to visit one (or many) of these Pueblos! I hope you enjoy and happy exploring!
+Ever wonder if there is a cat in the photo? No? Well,... regardless... if you ever DID wonder, I made this web app that allows you to upload a photo and have Microsoft's Azure Computer Vision detect if there is a cat in the photo.
 
 **Link to project:** https://catnotcat.herokuapp.com/
 
@@ -8,15 +8,10 @@ Ever visited Mexico or thought about visiting? If you are like a lot of people (
 
 ## How It's Made:
 
+I created a web app using Microsoft's Azure Computer Vision. I read their documentation and utilized their code template to begin. Computer Vision recognizes objects found in photos. The photos are hosted on Cloudinary. I used JavaScript to find cats in photos and display in EJS.
+
 **Tech used:** EJS, CSS, JavaScript, Bootstrap, Node.js, Cloudinary, Microsoft Azure Computer Vision
-
-
 
 ## Optimizations
 
-
-
 ## Lessons Learned:
-
-
-
