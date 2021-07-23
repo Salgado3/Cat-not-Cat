@@ -1,5 +1,5 @@
 {
-  "name": "Cat not Cat",
+  "name": "catnotcat",
   "version": "1.0.0",
   "description": "verifies if there is a cat in a photo that is uploaded by user",
   "main": "app.js",
