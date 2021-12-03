@@ -1,8 +1,31 @@
 body {
   background-image: url("./images/cat\ background.jpg");
-  margin-top: 10%;
-  height: 400px;
- 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  background: skyblue;
+  margin-bottom: 5%;
+}
+.navContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0% 2.5%;
+  width: 100%;
+}
+
+.navContainer h1 {
+display: inline-block;
+  background: #641111;
+  color: white;
+  text-shadow: 2px 2px #161616;
+}
+.navContainer h2 {
+  background: white;
 }
 
 .border {
@@ -22,5 +45,6 @@ img {
   margin: 0 1% 1% 1%;
 }
 
-.btns {
+.submit {
+  background-color: blanchedalmond;
 }
