@@ -13,19 +13,26 @@ body {
 .navContainer{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0% 2.5%;
   width: 100%;
 }
 
+.navHeaders {
+    margin: auto;
+    padding: 0% 40%;
+}
+
 .navContainer h1 {
-display: inline-block;
+  width: 100%;
   background: #641111;
   color: white;
+  padding: 0% 45%;
   text-shadow: 2px 2px #161616;
+  border-bottom: 5px solid black;
 }
 .navContainer h2 {
+  width: 100%;
   background: white;
+  border-bottom: 3px solid black;
 }
 
 .border {
