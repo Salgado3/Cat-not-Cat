@@ -20,7 +20,7 @@
      
       <h1 class="navHeaders">SEECATS</h1>
       <h2 class="navHeaders">"TheShazam for Cats"</h2>
-      <span class="startMenu">Let's Get Started</span>
+      <span class="startMenu" onclick="upload()">Let's Get Started</span>
       </div>
    
 
@@ -34,4 +34,14 @@
     </div>
   </div>
   </body>
+  <script>
+ function upload() {
+
+let startMenu = document.querySelector(".startMenu")
+let buttonContainer = document.querySelector(".buttonContainer")
+
+buttonContainer.style.display = "flex"
+startMenu.classList.add("startMenuHidden")
+}
+  </script>
 </html>

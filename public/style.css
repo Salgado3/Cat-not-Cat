@@ -17,7 +17,6 @@ body {
   border-radius: 10% 10% 10% 10%;
   height: 710px;
   background-image: url(./images/cat\ background.jpg);
-  opacity: .8;
   background-color: black;
   animation: fadein 3s;
 }
@@ -62,10 +61,19 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   font-size: 32px;
   font-weight: bold;
-  text-
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 color: #fff;
 text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+.startMenu:hover{
+  font-size: 33px;
+  cursor: pointer;
+ 
+}
+.startMenuHidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
 }
 
 .catH2 {
@@ -83,7 +91,7 @@ border-radius: 50%;
 }
 
 .buttonContainer{
-  display: flex;
+  display: none;
   flex-direction: column-reverse;
   font-size: 24px;
   text-align: center;
