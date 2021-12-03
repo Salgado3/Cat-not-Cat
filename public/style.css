@@ -2,12 +2,14 @@ body {
   background-image: url("./images/cat\ background.jpg");
   margin-top: 10%;
   height: 400px;
-  display: flex;
-  justify-content: center;
+ 
 }
 
 .border {
   padding: 1.5%, 1.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img {
