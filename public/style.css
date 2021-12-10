@@ -23,7 +23,7 @@ body {
 
 
 .navContainer{
-  border: 5px solid red;
+  /* border: 5px solid red; */
   border-radius: 13% 13% 10% 10%;
   height: 710px;
 }
@@ -73,12 +73,19 @@ text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 .startMenuHidden {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 1s, opacity 1s linear;
+  transition: visibility 0s .25s, opacity .25s linear;
 }
 
 .catH2 {
   color: rgba(255, 255, 255, 0.842);
   font-weight: bolder;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.catH2:hover {
+  color: rgba(255, 255, 255, 0.842);
+  font-weight: bolder;
+  font-size: larger;
+  cursor: pointer;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 

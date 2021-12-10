@@ -20,52 +20,16 @@
      
       <h1 class="navHeaders">SEECATS</h1>
       <h2 class="navHeaders">"TheShazam for Cats"</h2>
-      <span class="startMenu" onclick="upload()">Let's Get Started</span>
+      <span class="startMenu" onclick="getStarted()">Let's Get Started</span>
       </div>
 
-      <!-- Video access -->
-     <video id="player" controls autoplay></video>
-      <button id="capture">Capture</button>
-      <canvas id="canvas" width=320 height=240></canvas>
-      <script>
-        //saving image
-        const download = document.getElementById('canvas');
-        download.addEventListener('click', function(e) {
-        const link = document.createElement('a');
-        link.download = 'download.png';
-        link.href = canvas.toDataURL();
-        link.click();
-        link.delete;
-      });
-
-
-        const player = document.getElementById('player');
-        const canvas = document.getElementById('canvas');
-        const context = canvas.getContext('2d');
-        const captureButton = document.getElementById('capture');
       
-        const constraints = {
-          video: true,
-        };
-      
-        captureButton.addEventListener('click', () => {
-          // Draw the video frame to the canvas.
-          context.drawImage(player, 0, 0, canvas.width, canvas.height);
-        });
-      
-        // Attach the video stream to the video element and autoplay.
-        navigator.mediaDevices.getUserMedia(constraints)
-          .then((stream) => {
-            player.srcObject = stream;
-          });
-      </script> 
-    <!-- _______________   -->
 
     <div class="buttonContainer"> 
-        <h3 class="catH2">Touch to SEECATS</h3>
+        <h3 class="catH2" onclick="alert()">Touch to SEECATS</h3>
         <form action="/" enctype="multipart/form-data" method="post">
           <input type="file" name="file-to-upload" class="btn btn-info" capture="environment"  accept="image/*"/>
-          <input type="submit" value="Upload" class="submit btn " />
+          <!-- <input type="submit" value="Upload" class="submit btn" /> -->
         </form>
     </div>
   </div>
@@ -73,13 +37,17 @@
 
 
   <script>
- function upload() {
+ function getStarted() {
 
 let startMenu = document.querySelector(".startMenu")
 let buttonContainer = document.querySelector(".buttonContainer")
 
 buttonContainer.style.display = "flex"
 startMenu.classList.add("startMenuHidden")
+
+function alert() {
+alert("Azure free subscription expired. Will not execute :(")
+}
 }
   </script>
 </html>
